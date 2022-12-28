@@ -1,0 +1,32 @@
+
+
+  
+  <!-- Modal -->
+  <div class="modal  fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark ticket text-white">
+        <div class="modal-header">
+          <h3 class="modal-title  text-center" id="exampleModalLabel">Resreve Ticket</h3>
+          <button type="button" class="btn-close bg-light text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row" >
+          <div class="col-8">
+            <p class=" fs-5">{{"Movie Name : "+selectedMovie.title}}</p>
+            <p class=" fs-5">{{"Ticket ID : "+selectedMovie.id}} </p>
+            <p class=" fs-5">{{"Ticket Price : "+selectedMovie.vote_count}} </p>
+            <p class=" fs-5">{{"Release Date : "+selectedMovie.release_date}} </p>
+          </div>
+         <div class="col-4">
+          <img class="w-100" src={{baseImgUrl+selectedMovie.poster_path}} alt="">
+         </div>
+
+    
+
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button"  class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+          <button type="button" (click)="showSuccess()" class="btn btn-outline-success" data-bs-dismiss="modal">Confrim</button>
+        </div>
+      </div>
+    </div>
+  </div>
